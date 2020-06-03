@@ -1,0 +1,874 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="Anil z" name="author">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Eduglobal - Education & Courses HTML Template">
+<meta name="keywords" content="academy, course, education, elearning, learning, education html template, university template, college template, school template, online education template, tution center template">
+
+<!-- SITE TITLE -->
+<title>Elitech</title>
+<!-- Favicon Icon -->
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicone.png' %}">
+<!-- Animation CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}"/>
+<!-- Latest Bootstrap min CSS -->
+<link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" />
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet" /> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+<!-- Icon Font CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}" />
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" />
+<!--- owl carousel CSS-->
+<link rel="stylesheet" href="{% static 'assets/owlcarousel/css/owl.carousel.min.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/owlcarousel/css/owl.theme.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/owlcarousel/css/owl.theme.default.min.css' %}" />
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}" />
+<!-- Style CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+<link rel="stylesheet" id="layoutstyle" href="{% static 'assets/color/theme.css' %}" />
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="preloader">
+    <span class="spinner"></span>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- END LOADER --> 
+
+<div class="modal fade lr_popup" id="Login" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    	<div class="modal-content border-0">
+    		<div class="modal-body">
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+                <div class="row no-gutters">
+                	<div class="col-lg-5">
+                    	<div class="h-100 background_bg radius_ltlb_5" data-img-src="{% static 'assets/images/login_img.jpg' %}"></div>
+                    </div>
+                	<div class="col-lg-7">	
+                    	<div class="padding_eight_all">
+                    		<ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="login-tab1" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="signup-tab1" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="login" role="tabpanel">
+                                    <div class="heading_s1 mb-3">
+                                        <h4>Login</h4>
+                                    </div>
+                                    <form method="post" class="login">
+                                        <div class="form-group">
+                                            <input type="text" required="" class="form-control" name="email" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" required="" type="password" name="password" placeholder="Password">
+                                        </div>
+                                        <div class="login_footer form-group">
+                                            <a href="#">Lost your password?</a>
+                                            <div class="chek-form mb-3">
+                                                <div class="custome-checkbox">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
+                                                    <label class="form-check-label" for="exampleCheckbox3">Remember me</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-default btn-block" name="login">Log in</button>
+                                        </div>
+                                    </form>
+                                    <div class="different_login">
+                                        <span> or</span>
+                                    </div>
+                                    <ul class="btn-login list_none text-center">
+                                        <li><a href="#" class="btn btn-facebook"><i class="ion-social-facebook"></i>Facebook</a></li>
+                                        <li><a href="#" class="btn btn-google"><i class="ion-social-googleplus"></i>Google</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="signup" role="tabpanel">
+                                    <div class="heading_s1 mb-3">
+                                        <h4>Sign Up</h4>
+                                    </div>
+                                    <form method="post" class="login">
+                                    	<div class="form-group">
+                                            <input type="text" required="" class="form-control" name="username" placeholder="Username">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" required="" class="form-control" name="email" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" required="" type="password" name="password" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" required="" type="password" name="cpassword" placeholder="Confirm Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-default btn-block" name="login">Sign Up</button>
+                                        </div>
+                                    </form>
+                                    <div class="different_login">
+                                        <span> or</span>
+                                    </div>
+                                    <ul class="btn-login list_none text-center">
+                                        <li><a href="#" class="btn btn-facebook"><i class="ion-social-facebook"></i>Facebook</a></li>
+                                        <li><a href="#" class="btn btn-google"><i class="ion-social-googleplus"></i>Google</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                	</div>
+                </div>
+        	</div>
+        </div>
+    </div>
+</div>
+
+<!-- START HEADER -->
+<header class="header_wrap dark_skin">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg"> 
+            <a class="navbar-brand" href="index">
+                <img class="logo_light" src="{% static 'assets/images/elitechlogo.png' %}" alt="logo" />
+                <img class="logo_dark" src="{% static 'assets/images/elitechlogo.png' %}" alt="logo" />
+                <img class="logo_default" src="{% static 'assets/images/elitechlogo.png' %}" alt="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+
+                  <li>
+                        <a class="nav-link" href="about">À propos de nous</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Cours</a>
+                        <div class="dropdown-menu">
+                            <ul> 
+                                <li><a class="dropdown-item nav-link nav_item" href="courses">Cours</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="coursedetail">Détail du cours</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav attr-nav align-items-center">
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- END HEADER --> 
+
+<!-- START SECTION BANNER -->
+<section class="banner_section parallax_bg overlay_bg_blue_80" data-parallax-speed="0.7" data-parallax-bg-position="top center" data-parallax-bg-image="{% static 'assets/images/banner1.jpg' %}">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center animation" data-animation="fadeInLeft" data-animation-delay="0.02s">
+                    <div class="heading_s1 heading_light">
+                        <h2>Apprenez n'importe quoi, n'importe où</h2>
+                    </div>
+                    <p class="text-white">L’automatisation et la numérisation modifient rapidement les compétences requises pour le marché du travail, créant une demande de compétences technologiques et de spécialistes des données du «domaine expert». Avec les programmes de formation innovants d'Elitech Education, vous pouvez former vos équipes aux technologies émergentes, évaluer le développement des compétences de votre équipe et optimiser leurs talents.<br class="d-none d-md-block"> Nous concevons et développons des formations adaptées aux besoins de votre organisation et de vos collaborateurs. Nos solutions de formation en interne innovantes vous permettent de choisir l'un de nos programmes de formation à dispenser dans un lieu de votre choix.</p>
+                    <form method="post" name="enq" class="pt-md-2 form_style3 form-row justify-content-center">
+                            <div class="form-group col-lg-3 col-md-4">
+                                <input required="required" placeholder="Rechercher..." class="form-control" name="name" type="text">
+                             </div>
+                            <div class="form-group col-lg-3 col-md-4">
+                                <div class="custom_select">
+                                    <select class="form-control">
+                                        <option>Selection de Cours</option>
+                                        <option>BI</option>
+                                        <option>Big data</option>
+                                        <option>Machine learning</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" title="Submit Your Message!" class="btn btn-default btn-radius" name="submit" value="Submit">Recherche de cours</button>
+                            </div>
+                    </form>                        
+                </div>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</section>
+<!-- END SECTION BANNER -->
+
+<!-- START SECTION FEATURE -->
+<section>
+    <div class="container">
+    	<div class="row justify-content-center">
+        	<div class="col-xl-6 col-lg-8">
+            	<div class="text-center animation" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="heading_s1 text-center">
+                        <h2>Les détails de nos spécialisation</h2>
+                    </div>
+                    <p>5 Spécialisations en Informatique et 2 en Commerce, conçues autour des demandes actuelles et en émergence en Entreprise</p>
+                </div>
+            </div>
+        </div>
+        <div class="row animation"  data-animation="fadeInUp" data-animation-delay="0.02s">
+        	<div class="col-lg-2 col-sm-4 col-6">
+                <div class="single_categories cat_style2">
+                    <a href="#" class="bg_danger">
+                        <i class="fa fa-globe"></i>
+                        CLOUD COMPUTING
+                        <span class="cat_count">20</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+                <div class="single_categories cat_style2">
+                    <a href="#" class="bg_blue2">
+                        <i class="fa fa-cubes"></i>
+                        MANAGEMENT
+                        <span class="cat_count">15</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+            	<div class="single_categories cat_style2">
+                    <a href="#" class="bg_orange">
+                        <i class="fa fa-code"></i>
+                        MOBILE & WEB DEVELOPMENT
+                        <span class="cat_count">21</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+                <div class="single_categories cat_style2">
+                    <a href="#" class="bg_pink">
+                        <i class="fas fa-envelope-open-text"></i>
+                        DIGITAL MARKETING
+                        <span class="cat_count">16</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+                <div class="single_categories cat_style2">
+                    <a href="#" class="bg_blue">
+                        <i class="fas fa-database"></i>
+                        BIG DATA
+                        <span class="cat_count">08</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+                <div class="single_categories cat_style2">
+                    <a href="#" class="bg_light_green">
+                        <i class="fas fa-robot"></i>
+                        ARTIFICIAL INTELLIGENCE
+                        <span class="cat_count">25</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION FEATURE -->
+
+<!-- START SECTION FEATURE -->
+
+<!-- END SECTION FEATURE -->
+
+<!-- START SECTION COURSES -->
+<section>
+	<div class="container">
+    	<div class="row justify-content-center">
+        	<div class="col-xl-6 col-lg-8">
+            	<div class="text-center animation" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="heading_s1 text-center">
+                        <h2>Nos Cours</h2>
+                    </div>
+                        <p>Nos cours de formation en science des données en personne et en ligne uniques aident les professionnels à devenir plus employables dans l'industrie technologique</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-lg-4 col-sm-6">
+            	<div class="content_box hover_style1 radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                	<div class="content_img radius_ltrt_10">
+                    	<a href="#"><img src="{% static 'assets/images/course_img1.jpg' %}" alt="course_img1"/></a>
+                    </div>
+                    <div class="content_desc">
+                    	<h4 class="content_title"><a href="#">Spark</a></h4>
+                        <p>développer leur portefeuille de compétences et de certifications, tout en leur permettant de mieux s'approprier leur propre développement professionnel.</p>
+                        <div class="courses_info">
+                        	<div class="rating_stars">
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star-half"></i> 
+                            </div>
+                            <ul class="list_none content_meta">
+                                <li><a href="#" ><i class="ti-user"></i>31</a></li>
+                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content_footer">
+                        <div class="teacher">
+                            <a href="#"><img src="{% static 'assets/images/user1.jpg' %}" alt="user1"><span>Alia Noor</span></a>
+                        </div>
+                        <div class="price">
+                        	<span class="alert alert-success">Gratuit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+            	<div class="content_box hover_style1 radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+                	<div class="content_img radius_ltrt_10">
+                    	<a href="#"><img src="{% static 'assets/images/course_img2.jpg' %}" alt="course_img2"/></a>
+                    </div>
+                    <div class="content_desc">
+                    	<h4 class="content_title"><a href="#">Hadoop</a></h4>
+                        <p>développer leur portefeuille de compétences et de certifications, tout en leur permettant de mieux s'approprier leur propre développement professionnel.</p>
+                        <div class="courses_info">
+                        	<div class="rating_stars">
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star-half"></i> 
+                            </div>
+                            <ul class="list_none content_meta">
+                                <li><a href="#" ><i class="ti-user"></i>31</a></li>
+                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content_footer">
+                        <div class="teacher">
+                            <a href="#"><img src="{% static 'assets/images/user2.jpg' %}" alt="user2"><span>Dany Core</span></a>
+                        </div>
+                        <div class="price">
+                        	<span class="alert alert-info">49£</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+            	<div class="content_box hover_style1 radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+                	<div class="content_img radius_ltrt_10">
+                    	<a href="#"><img src="{% static 'assets/images/course_img3.jpg' %}" alt="course_img3"/></a>
+                    </div>
+                    <div class="content_desc">
+                    	<h4 class="content_title"><a href="#">Scrum</a></h4>
+                        <p>développer leur portefeuille de compétences et de certifications, tout en leur permettant de mieux s'approprier leur propre développement professionnel.</p>
+                        <div class="courses_info">
+                        	<div class="rating_stars">
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star-half"></i> 
+                            </div>
+                            <ul class="list_none content_meta">
+                                <li><a href="#" ><i class="ti-user"></i>31</a></li>
+                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content_footer">
+                        <div class="teacher">
+                            <a href="#"><img src="{% static 'assets/images/user3.jpg' %}" alt="user3"><span>Smith Parker</span></a>
+                        </div>
+                        <div class="price">
+                        	<span class="alert alert-success">Gratuit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+            	<div class="content_box hover_style1 radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                	<div class="content_img radius_ltrt_10">
+                    	<a href="#"><img src="{% static 'assets/images/course_img4.jpg' %}" alt="course_img4"/></a>
+                    </div>
+                    <div class="content_desc">
+                    	<h4 class="content_title"><a href="#">BI</a></h4>
+                        <p>développer leur portefeuille de compétences et de certifications, tout en leur permettant de mieux s'approprier leur propre développement professionnel.</p>
+                        <div class="courses_info">
+                        	<div class="rating_stars">
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star-half"></i> 
+                            </div>
+                            <ul class="list_none content_meta">
+                                <li><a href="#" ><i class="ti-user"></i>31</a></li>
+                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content_footer">
+                        <div class="teacher">
+                            <a href="#"><img src="{% static 'assets/images/user4.jpg' %}" alt="user4"><span>Luis Robert</span></a>
+                        </div>
+                        <div class="price">
+                        	<span class="alert alert-info">54£</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+            	<div class="content_box hover_style1 radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+                	<div class="content_img radius_ltrt_10">
+                    	<a href="#"><img src="{% static 'assets/images/course_img5.jpg' %}" alt="course_img5"/></a>
+                    </div>
+                    <div class="content_desc">
+                    	<h4 class="content_title"><a href="#">Deep Learning</a></h4>
+                        <p>développer leur portefeuille de compétences et de certifications, tout en leur permettant de mieux s'approprier leur propre développement professionnel.</p>
+                        <div class="courses_info">
+                        	<div class="rating_stars">
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star-half"></i> 
+                            </div>
+                            <ul class="list_none content_meta">
+                                <li><a href="#" ><i class="ti-user"></i>31</a></li>
+                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content_footer">
+                        <div class="teacher">
+                            <a href="#"><img src="{% static 'assets/images/user5.jpg' %}" alt="user5"><span>Wendy Nahse</span></a>
+                        </div>
+                        <div class="price">
+                        	<span class="alert alert-info">36£</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+            	<div class="content_box hover_style1 radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+                	<div class="content_img radius_ltrt_10">
+                    	<a href="#"><img src="{% static 'assets/images/course_img6.jpg' %}" alt="course_img6"/></a>
+                    </div>
+                    <div class="content_desc">
+                    	<h4 class="content_title"><a href="#">Big Data</a></h4>
+                        <p>développer leur portefeuille de compétences et de certifications, tout en leur permettant de mieux s'approprier leur propre développement professionnel.</p>
+                        <div class="courses_info">
+                        	<div class="rating_stars">
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star"></i>
+                                <i class="ion-android-star-half"></i> 
+                            </div>
+                            <ul class="list_none content_meta">
+                                <li><a href="#" ><i class="ti-user"></i>31</a></li>
+                                <li><a href="#"><i class="ti-heart"></i>10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content_footer">
+                        <div class="teacher">
+                            <a href="#"><img src="{% static 'assets/images/user6.jpg' %}" alt="user6"><span>Jasica Wood</span></a>
+                        </div>
+                        <div class="price">
+                        	<span class="alert alert-info">22£</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-12">
+            	<div class="text-center animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                	<div class="medium_divider"></div>
+                	<a href="#" class="btn btn-default btn-radius">Voir tous les cours <i class="ion-ios-arrow-thin-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION COURSES -->
+
+<!-- START SECTION COUNTER -->
+<section class="background_bg bg_blue2 bg_fixed" data-img-src="{% static 'assets/images/pattern_bg4.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-6 ">
+                <div class="box_counter counter_style2 text_white text-center animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                	<div class="counter_icon">
+                    	<img src="{% static 'assets/images/counter_icon1.png' %}" alt="counter_icon1" />
+                    </div>
+                    <div class="counter_content">
+                        <h3 class="counter_text"><span class="counter">1800</span>+</h3>
+                        <p>Etudiants</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 ">
+                <div class="box_counter counter_style2 text_white text-center animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+                    <div class="counter_icon">
+                    	<img src="{% static 'assets/images/counter_icon2.png' %}" alt="counter_icon2" />
+                    </div>
+                    <div class="counter_content">
+                        <h3 class="counter_text"><span class="counter">70</span></h3>
+                        <p>Cours</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 ">
+                <div class="box_counter counter_style2 text_white text-center animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+                    <div class="counter_icon">
+                    	<img src="{% static 'assets/images/counter_icon3.png' %}" alt="counter_icon3" />
+                    </div>
+                    <div class="counter_content">
+                        <h3 class="counter_text"><span class="counter">700</span>+</h3>
+                        <p>Professeurs certifiés</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 ">
+                <div class="box_counter counter_style2 text_white text-center animation" data-animation="fadeInUp" data-animation-delay="0.05s">
+                	<div class="counter_icon">
+                    	<img src="{% static 'assets/images/counter_icon4.png' %}" alt="counter_icon4" />
+                    </div>
+                    <div class="counter_content">
+                        <h3 class="counter_text"><span class="counter">1200</span>+</h3>
+                        <p>Primé</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+	<div class="container">
+    	<div class="row justify-content-center">
+        	<div class="col-xl-6 col-lg-8">
+            	<div class="text-center animation" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="heading_s1 text-center">
+                        <h2>Nos Professeurs</h2>
+                    </div>
+
+                    <p>Un enseignant est une personne chargée de transmettre des connaissances ou méthodes de raisonnement à autrui dans le cadre d'une formation générale ou d'une formation spécifique à une matière, un domaine ou une discipline scolaire. </p>
+                 <p><b><i>Voici nos Professeurs</i></b></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-lg-3 col-sm-6">
+            	<div class="team_box team_style3 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                	<div class="team_img">
+                    	<img src="{% static 'assets/images/team_img1.jpg' %}" alt="team1">
+                    </div>
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">Aden Smith</a></h5>
+                        <span>Chef de service </span>
+                        <ul class="list_none social_icons">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+            	<div class="team_box team_style3 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+                	<div class="team_img">
+                    	<img src="{% static 'assets/images/team_img2.jpg' %}" alt="team2">
+                    </div>
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">Kally Brooks</a></h5>
+                        <span>Professeur de Big Data</span>
+                        <ul class="list_none social_icons">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+            	<div class="team_box team_style3 animation" data-animation="fadeInUp" data-animation-delay="0.04s">
+                	<div class="team_img">
+                    	<img src="{% static 'assets/images/team_img3.jpg' %}" alt="team3">
+                    </div>
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">Andrew Ng</a></h5>
+                        <span>Professeur de Deep learning</span>
+                        <ul class="list_none social_icons">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+            	<div class="team_box team_style3 animation" data-animation="fadeInUp" data-animation-delay="0.05s">
+                	<div class="team_img">
+                    	<img src="{% static 'assets/images/team_img6.jpg' %}" alt="team6">
+                    </div>
+                    <div class="team_title radius_lbrb_10 text-center">
+                        <h5><a href="#">Jesica Belly</a></h5>
+                        <span>Professeure de BI</span>
+                        <ul class="list_none social_icons">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION TEACHER -->
+
+<!-- START SECTION VIDEO -->
+<section class="p-0 overflow_hide">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 p-0 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+                <div class="h-100 background_bg overlay_bg_50 md-height-300" data-img-src="{% static 'assets/images/about_img.jpg' %}">
+                	<a href="https://www.youtube.com/watch?v=d8z7_FAJ7cY" class="video_popup video_play"><img class="bounce_img" src="{% static 'assets/images/play-icon.png' %}" alt="play-icon"/></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 p-0 animation" data-animation="fadeInUp" data-animation-delay="0.03s">
+            	<div class="bg_blue2 h-100 d-flex align-items-center padding_eight_all text_white">
+                	<div>
+                        <div class="heading_s1 heading_light">
+                          <h2>Faites un tour sur le campus</h2>
+                        </div>
+                        <p><b>Tous les cours en personne sont offerts en direct et en ligne selon la disponibilité des participants</b></p>
+                        <p><b><i>ELITECH365:</i></b> Tous les participants ont accès à notre portail en ligne ELITECH365:</p>
+                        <ul class="list-style: square">
+                        	<li>Matériel d'entraînement</li>
+                            <li>Vidéos</li>
+                            <li> Quiz</li>
+                            <li>Appels vidéo, appels audio et messagerie</li>
+                            <li>Commentaires instantanés et recommandations personnalisées</li>
+                        </ul>
+                        <p><b><i>PASSEPORT DE COMPÉTENCES:</i></b> notre plateforme personnalisée aide les participants à développer leur portefeuille de compétences et de certifications, et à identifier le développement de compétences futures pour faire évoluer leurs talents et accélérer leur carrière.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION VIDEO -->
+
+<!-- START SECTION TESTIMONIAL -->
+
+<!-- END SECTION TESTIMONIAL -->
+
+<section>
+	<div class="container">
+    	<div class="row align-items-center">
+        	<div class="col-lg-6">
+                <div class="animation" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="heading_s1">
+                        <h2>ce que dit notre client</h2>
+                    </div>
+                    <div class="small_divider clearfix"></div>
+                    <div class="testimonial_slider carousel_slider owl-carousel owl-theme nav_bottom_right pr-lg-4 animation" data-margin="30" data-loop="true" data-autoplay="true" data-dots="false" data-nav="true" data-autoheight="true" data-animation="fadeInLeft" data-animation-delay="0.02s" data-items="1">
+                        <div class="testimonial_box">
+                        	<div class="testi_meta">
+                                <div class="testi_desc">
+                                    <p>Aujourd'hui, les professionnels de Power BI sont employés dans diverses grandes entreprises de différents secteurs, notamment l'informatique, les services, les logiciels informatiques, les ressources humaines, les services financiers, les soins de santé, entre autres. Les rôles de travail qui pourraient être proposés aux professionnels de Power BI incluent Data Scientists, Data Analysis et Data Visualization Analyst.</p>
+                                </div>
+                            </div>
+                            <div class="testimonial_img">
+                                <img class="radius_all_5" src="{% static 'assets/images/user1.jpg' %}" alt="user1">
+                            </div>
+                            <div class="testi_user">
+                                <h6>Lissa Castro</h6>
+                                <span class="text_default">Co-Founder</span>
+                            </div>
+                            
+                        </div>
+                        <div class="testimonial_box">
+                        	<div class="testi_meta">
+                                <div class="testi_desc">
+                                    <p>Aujourd'hui, les professionnels de Power BI sont employés dans diverses grandes entreprises de différents secteurs, notamment l'informatique, les services, les logiciels informatiques, les ressources humaines, les services financiers, les soins de santé, entre autres. Les rôles de travail qui pourraient être proposés aux professionnels de Power BI incluent Data Scientists, Data Analysis et Data Visualization Analyst.</p>
+                                </div>
+                            </div>
+                            <div class="testimonial_img">
+                                <img class="radius_all_5" src="{% static 'assets/images/user2.jpg' %}" alt="user2">
+                            </div>
+                            <div class="testi_user">
+                                <h6>Lissa Castro</h6>
+                                <span class="text_default">Co-Founder</span>
+                            </div>
+                        </div>
+                        <div class="testimonial_box">
+                        	<div class="testi_meta">
+                                <div class="testi_desc">
+                                    <p>Aujourd'hui, les professionnels de Power BI sont employés dans diverses grandes entreprises de différents secteurs, notamment l'informatique, les services, les logiciels informatiques, les ressources humaines, les services financiers, les soins de santé, entre autres. Les rôles de travail qui pourraient être proposés aux professionnels de Power BI incluent Data Scientists, Data Analysis et Data Visualization Analyst.</p>
+                                </div>
+                            </div>
+                            <div class="testimonial_img">
+                                <img class="radius_all_5" src="{% static 'assets/images/user3.jpg' %}" alt="user3">
+                            </div>
+                            <div class="testi_user">
+                                <h6>Lissa Castro</h6>
+                                <span class="text_default">Co-Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+            	<div class="testi_img_holder">
+                    <div class="testimonial_shape"><img src="{% static 'assets/images/testimonial_shape.png' %}" alt="testimonial_shape"/></div>
+                    <div class="background_bg testimonial_image" data-img-src="{% static 'assets/images/testimonial_img.jpg' %}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION TESTIMONIAL -->
+
+<!-- START SECTION BLOG -->
+
+<!-- END SECTION BLOG -->
+<section>
+	<div class="container">
+    	<div class="row justify-content-center">
+        	<div class="col-xl-6 col-lg-8">
+            	<div class="text-center animation" data-animation="fadeInUp" data-animation-delay="0.01s">
+                    <div class="heading_s1 text-center">
+                        <h2>Nos Client</h2>
+                    </div>
+                    <p>Voici des exemples de nos clients.</p>
+                    <div class="small_divider"></div>
+                </div>
+            </div>
+        </div>
+    	<div class="row">
+        	<div class="col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.02s">
+            	<div class="cl_logo_slider carousel_slider owl-carousel owl-theme" data-margin="15" data-loop="true" data-autoplay="true" data-dots="false" data-responsive='{"0":{"items": "2"}, "380":{"items": "3"}, "600":{"items": "4"}, "1000":{"items": "5"}, "1199":{"items": "6"}}'>
+                	<div class="item">
+                		<a href="#"><img src="{% static 'assets/images/cl_logo1.png' %}" alt="cl_logo1"/></a>
+                    </div>
+
+                    <div class="item">
+                		<a href="#"><img src="{% static 'assets/images/cl_logo3.png' %}" alt="cl_logo3"/></a>
+                    </div>
+                    <div class="item">
+                		<a href="#"><img src="{% static 'assets/images/cl_logo4.png' %}" alt="cl_logo4"/></a>
+                    </div>
+                    <div class="item">
+                		<a href="#"><img src="{% static 'assets/images/cl_logo5.png' %}" alt="cl_logo5"/></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- START FOOTER -->
+<footer class="footer_dark background_bg bg_blue2 bg_fixed" data-img-src="{% static 'assets/images/pattern_bg4.png' %}">
+	<div class="top_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-8 mb-4 mb-lg-0">
+                	<div class="footer_logo">
+                    	<a href="index"><img alt="logo" src="{% static 'assets/images/elitech.png' %}"></a>
+                    </div>
+                    <p>Elitech Formation est une entité créée par Elitech pour assurer et encadrer l’activité de formation qu’elle propose depuis plus de 10 ans.</p>
+                    <ul class="contact_info contact_info_light list_none">
+                        <li>
+                            <i class="fa fa-map-marker-alt "></i>
+                            <address> 23/25 rue Jean-Jacques Rousseau 75001 PARIS</address>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <a href=" contact@elitech.training"> contact@elitech.training</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-mobile-alt"></i>
+                            <p> +33 1 88 88 00 50our</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h6 class="widget_title">Suivez nous</h6>
+                    <ul class="list_none social_icons rounded_social social_white border_social">
+                    	<li><a href="https://www.facebook.com/elitech.educationtak"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=d8z7_FAJ7cY&t=76s"><i class="ion-social-youtube-outline"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- END FOOTER -->
+
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
+
+<!-- Latest jQuery --> 
+<script src="{% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
+<!-- jquery-ui --> 
+<script src="{% static 'assets/js/jquery-ui.js' %}"></script>
+<!-- popper min js --> 
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<!-- Latest compiled and minified Bootstrap --> 
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- owl-carousel min js  --> 
+<script src="{% static 'assets/owlcarousel/js/owl.carousel.min.js' %}"></script>
+<!-- magnific-popup min js  --> 
+<script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+<!-- waypoints min js  --> 
+<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+<!-- parallax js  --> 
+<script src="{% static 'assets/js/parallax.js' %}"></script>
+<!-- countdown js  --> 
+<script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
+<!-- jquery.counterup.min js --> 
+<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+<!-- imagesloaded js --> 
+<script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+<!-- isotope min js --> 
+<script src="{% static 'assets/js/isotope.min.js' %}"></script>
+<!-- jquery.parallax-scroll js -->
+<script src="{% static 'assets/js/jquery.parallax-scroll.js' %}"></script>
+<!-- scripts js --> 
+<script src="{% static 'assets/js/scripts.js' %}"></script>
+
+
+</body>
+</html>
